@@ -17,6 +17,26 @@ This is the frontend application for **GreenHeat**, a community-owned energy com
 ## Setup & Installation
 
 ### 1. Clone the repository
-```bash
 git clone https://github.com/azizouerta/greenheat-frontend.git
 cd greenheat-frontend
+
+### 2. Install dependencies
+npm install
+
+### 3. Create .env file
+REACT_APP_API_URL=http://localhost:5000
+
+### 4. Run the app locally
+npm start
+
+## Docker Instructions
+### 1. Build the Docker image
+docker build -t greenheat-frontend .
+
+### 2. Run the Docker container
+docker run -d -p 3000:3000 greenheat-frontend
+
+### Using Docker Compose
+You can also use Docker Compose to start both the frontend and backend services together. You will need a docker-compose.yml file that defines both services (frontend and backend).
+### docker-compose up --build
+
